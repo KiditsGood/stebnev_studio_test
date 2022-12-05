@@ -1,0 +1,64 @@
+.picture{
+  max-width: 620px;
+  max-height: 450px;
+  position: relative;
+
+  &__main{
+    width: 620px;
+    height: 450px;
+    object-fit: cover;
+  }
+
+  &__model{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 60px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    width: 85px;
+    height: 84px;
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: #2B482D;
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+
+    &-big{
+      font-size: 50px;
+      line-height: 90px;
+      color: white;
+      font-family: 'Oswald', sans-serif;
+    }
+  }
+}
+
+.slider{
+  max-width: 620px;
+
+  &__item{
+    width: 132px;
+    height: 85px;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: 0.2s;
+
+    &.active{
+      opacity: 1;
+    }
+
+    &-image{
+      width: 100%;
+    }
+
+    &:hover{
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+}

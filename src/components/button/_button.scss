@@ -1,0 +1,19 @@
+.button{
+  font-size: 14px;
+  line-height: 24px;
+  width: 224px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  &--green{
+    background: $lightgreen;
+    color: white;
+
+    &:hover{
+      background: #029138;
+    }
+  }
+}
