@@ -5,12 +5,57 @@
   max-width: 1490px;
   margin: 0 auto;
 
+  @include media-xxl{
+    max-width: 1380px;
+    gap: 95px;
+  }
+
+  @include media-xl{
+    max-width: 1076px;
+    gap: 40px;
+  }
+
+  @include media-lg{
+    max-width: 968px;
+  }
+
+  @include media-md{
+    max-width: 596px;
+    gap: 51px;
+    flex-direction: column;
+  }
+
+  @include media-sm{
+    max-width: unset;
+    gap: 40px;
+  }
+
   &__images{
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 30px;
     max-width: 620px;
+
+    @include media-xl{
+      max-width: 518px;
+      gap: 25px;
+    }
+
+    @include media-lg{
+      max-width: 464px;
+      gap: 23px;
+    }
+
+    @include media-md{
+      gap: 31px;
+      max-width: 596px;
+    }
+
+    @include media-sm{
+      max-width: unset;
+      gap: 15px;
+    }
   }
 
   &__info{
@@ -18,16 +63,65 @@
     flex-direction: column;
     max-width: 529px;
 
+    @include media-lg{
+      max-width: 463px;
+    }
+
+    @include media-md{
+      max-width: 596px;
+    }
+
     &-title{
       font-size: 60px;
       line-height: 78px;
       margin-bottom: 32px;
+
+      @include media-xxl{
+        font-size: 52px;
+        line-height: 68px;
+        margin-bottom: 30px;
+      }
+
+      @include media-xl{
+        font-size: 44px;
+        line-height: 57px;
+        margin-bottom: 25px;
+      }
+
+      @include media-lg{
+        font-size: 38px;
+        line-height: 49px;
+        margin-bottom: 30px;
+      }
+
+      @include media-md{
+        font-size: 30px;
+        line-height: 39px;
+      }
+
+      @include media-sm{
+        font-size: 26px;
+        line-height: 34px;
+      }
     }
 
     &-desc{
       font-size: 16px;
       line-height: 24px;
       color: $lightgray;
+
+      @include media-xxl{
+        font-size: 14px;
+        line-height: 25px;
+      }
+
+      @include media-xl{
+        line-height: 24px;
+      }
+
+      @include media-md{
+        line-height: 22px;
+      }
     }
 
     .chars{
@@ -35,6 +129,18 @@
       align-items: stretch;
       gap: 10px;
       margin: 50px 0 28px;
+
+      @include media-xxl{
+        margin: 40px 0 0;
+      }
+
+      @include media-xl{
+        margin-top: 30px;
+      }
+
+      @include media-sm{
+        flex-wrap: wrap;
+      }
 
       &__item{
         font-size: 14px;
@@ -50,6 +156,10 @@
       gap: 31px;
       position: relative;
       align-self: flex-start;
+
+      @include media-xxl{
+        display: none;
+      }
 
       &__name{
         font-size: 14px;
@@ -136,8 +246,17 @@
       margin: 30px 0;
       padding-left: 5px;
 
+      @include media-xxl{
+        gap: 32px;
+      }
+
+      @include media-xl{
+        margin: 25px 0;
+      }
+
       &__old{
         font-size: 16px;
+        font-weight: 500;
         line-height: 22px;
         position: relative;
 
@@ -157,6 +276,11 @@
         font-size: 22px;
         font-weight: 700;
         line-height: 31px;
+
+        @include media-xxl{
+          font-size: 20px;
+          line-height: 28px;
+        }
       }
     }
   }

@@ -7,6 +7,7 @@
             class="slider"
             :slides-per-view="4"
             :space-between="30"
+            :break-points="360"
             @swiper="onSwiper"
             @slideChange="onSlideChange"
     >

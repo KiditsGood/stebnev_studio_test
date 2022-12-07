@@ -8,6 +8,17 @@
   justify-content: center;
   text-transform: uppercase;
 
+  @include media-xxl{
+    width: 187px;
+    height: 53px;
+  }
+
+  @include media-xl{
+    width: 177px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
   &--green{
     background: $lightgreen;
     color: white;

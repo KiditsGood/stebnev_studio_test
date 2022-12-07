@@ -4,10 +4,38 @@
   gap: 30px;
   margin: 40px 0 0 60px;
 
+  @include media-xxl{
+    margin: 35px auto 0;
+    max-width: 1380px;
+  }
+
+  @include media-xl{
+    margin: 30px auto 0;
+    max-width: 1076px;
+  }
+
+  @include media-lg{
+    max-width: 968px;
+  }
+
+  @include media-md{
+    display: none;
+  }
+
   &__item{
     font-size: 14px;
     line-height: 25px;
     color: $lightgray;
+
+    @include media-xxl{
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    @include media-lg{
+      font-size: 10px;
+      line-height: 18px;
+    }
 
     &:not(:last-child){
       color: #C4C4C4;
@@ -25,6 +53,10 @@
         background: #C4C4C4;
         top: 11px;
         right: -20px;
+
+        @include media-lg{
+          top: 7px;
+        }
       }
     }
   }

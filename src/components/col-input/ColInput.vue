@@ -13,7 +13,7 @@
             </div>
             <p class="request__value-wallet">п.е.</p>
         </div>
-        <Button />
+        <Button :butt-title="'добавить в заявку'" />
     </div>
 </template>
 

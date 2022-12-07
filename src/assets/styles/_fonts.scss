@@ -34,4 +34,14 @@ h6{
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
+
+  @include media-xxl{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include media-xl{
+    font-size: 14px;
+    line-height: 21px;
+  }
 }

@@ -1,0 +1,324 @@
+.footer{
+  background: #F3F4F4;
+  box-sizing: border-box;
+  padding: 60px 60px 26px;
+  margin-top: auto;
+
+  @include media-xxl{
+    padding: 50px 0 20px;
+  }
+
+  @include media-xl{
+    padding: 42px 0 20px;
+  }
+
+  @include media-lg{
+    padding: 40px 0 20px;
+  }
+
+  @include media-sm{
+    padding: 40px 15px 20px;
+  }
+
+  &__rights{
+    font-size: 14px;
+    line-height: 28px;
+    color: #8B8B8B;
+
+    @include media-xxl{
+      font-size: 12px;
+      line-height: 24px;
+    }
+
+    @include media-sm{
+      order: 2;
+    }
+  }
+
+  &__text{
+    font-size: 14px;
+    line-height: 21px;
+    color: $lightgray;
+    max-width: 250px;
+
+    @include media-xxl{
+      font-size: 13px;
+      line-height: 20px;
+      max-width: 208px;
+    }
+
+    @include media-xl{
+      font-size: 12px;
+      line-height: 18px;
+      max-width: 194px;
+    }
+
+    @include media-lg{
+      max-width: 169px;
+    }
+
+    @include media-md{
+      max-width: 296px;
+    }
+  }
+
+  &__logo{
+    max-width: 176px;
+    max-height: 47px;
+
+    @include media-xxl{
+      max-width: 147px;
+      max-height: 39px;
+    }
+
+    @include media-xl{
+      max-width: 115px;
+      max-height: 30px;
+    }
+
+    &-icon{
+      width: 176px;
+      height: 47px;
+
+      @include media-xxl{
+        width: 147px;
+        height: 39px;
+      }
+
+      @include media-xl{
+        width: 115px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include media-xxl{
+      max-width: 1380px;
+      margin: 0 auto;
+      gap: 43px;
+    }
+
+    @include media-xl{
+      max-width: 1076px;
+      gap: 40px;
+    }
+
+    @include media-lg{
+      max-width: 968px;
+      gap: 50px;
+    }
+
+    @include media-md{
+      max-width: 596px;
+      gap: 40px;
+    }
+
+    @include media-sm{
+      max-width: unset;
+    }
+
+    &-top{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+
+      @include media-md{
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      &_left{
+        display: flex;
+        align-items: flex-start;
+        gap: 134px;
+
+        @include media-xxl{
+          gap: 90.5px;
+        }
+
+        @include media-xl{
+          gap: 30px;
+        }
+
+        @include media-lg{
+          gap: 54px;
+        }
+
+        @include media-md{
+          gap: 104px;
+        }
+
+        @include media-sm{
+          gap: 20px;
+          flex-direction: column;
+        }
+      }
+
+      &_right{
+        display: flex;
+        align-items: flex-start;
+        gap: 106px;
+
+        @include media-xxl{
+          gap: 35px;
+        }
+
+        @include media-xl{
+          gap: 37px;
+        }
+
+        @include media-lg{
+          gap: 33px;
+        }
+
+        @include media-md{
+          gap: 20px;
+          flex-direction: column;
+        }
+
+        .subscribe{
+          display: flex;
+          align-items: flex-start;
+          gap: 40px;
+          position: relative;
+
+          @include media-xxl{
+            gap: 52px;
+          }
+
+          @include media-xl{
+            gap: 26px;
+          }
+
+          @include media-md{
+            gap: 28px;
+          }
+
+          @include media-sm{
+            flex-direction: column;
+            gap: 16px;
+          }
+
+          &__label{
+            font-size: 14px;
+            line-height: 21px;
+            color: $lightgray;
+            position: absolute;
+            top: 13px;
+            left: 16px;
+            user-select: none;
+            pointer-events: none;
+            transition: 0.2s;
+
+            @include media-xxl{
+              font-size: 13px;
+              line-height: 19.5px;
+              top: 9px;
+            }
+
+            @include media-xl{
+              font-size: 12px;
+              line-height: 18px;
+              top: 11px;
+              left: 9px;
+            }
+
+            @include media-md{
+              & + button{
+                width: 278px;
+              }
+            }
+
+            @include media-sm{
+              & + button{
+                width: 290px;
+              }
+            }
+
+            &-star{
+              color: $orange;
+            }
+          }
+
+          &__input{
+            border: 1px solid rgba(55, 55, 55, 0.3);
+            padding: 15px;
+            box-sizing: border-box;
+            width: 250px;
+
+            @include media-xxl{
+              width: 208px;
+              padding: 10px 12px 12px;
+            }
+
+            @include media-xl{
+              width: 182px;
+              padding: 12px 9px;
+            }
+
+            @include media-md{
+              width: 290px;
+            }
+
+            &:focus + .subscribe__label{
+              font-size: 10px;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &-bottom{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      @include media-sm{
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .stebnev{
+        font-size: 14px;
+        line-height: 21px;
+        color: #8B8B8B;
+
+        @include media-xxl{
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        @include media-sm{
+          order: 1;
+        }
+
+        &__link{
+          position: relative;
+
+          &:hover{
+            color: $lightgreen;
+          }
+
+          &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            height: 1px;
+            background: $lightgreen;
+          }
+        }
+      }
+    }
+  }
+}

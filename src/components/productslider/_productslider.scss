@@ -3,10 +3,50 @@
   max-height: 450px;
   position: relative;
 
+  @include media-xl{
+    max-width: 518px;
+    max-height: 377px;
+  }
+
+  @include media-lg{
+    max-width: 464px;
+    max-height: 337px;
+  }
+
+  @include media-md{
+    max-width: 596px;
+    max-height: 431px;
+  }
+
+  @include media-sm{
+    max-width: unset;
+    max-height: 300px;
+  }
+
   &__main{
     width: 620px;
     height: 450px;
     object-fit: cover;
+
+    @include media-xl{
+      width: 518px;
+      height: 377px;
+    }
+
+    @include media-lg{
+      width: 464px;
+      height: 337px;
+    }
+
+    @include media-md{
+      width: 596px;
+      height: 431px;
+    }
+
+    @include media-sm{
+      width: 100%;
+      height: 300px;
+    }
   }
 
   &__model{
@@ -29,17 +69,55 @@
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(3.5px);
 
+    @include media-xl{
+      width: 75px;
+      height: 74px;
+      font-size: 14px;
+      line-height: 55px;
+    }
+
+    @include media-lg{
+      width: 70px;
+      height: 70px;
+    }
+
     &-big{
       font-size: 50px;
       line-height: 90px;
       color: white;
       font-family: 'Oswald', sans-serif;
+
+      @include media-xl{
+        font-size: 40px;
+        line-height: 80px;
+      }
+
+      @include media-lg{
+        font-size: 35px;
+        line-height: 75px;
+      }
     }
   }
 }
 
 .slider{
   max-width: 620px;
+
+  @include media-xl{
+    max-width: 518px;
+  }
+
+  @include media-lg{
+    max-width: 464px;
+  }
+
+  @include media-md{
+    max-width: 596px;
+  }
+
+  @include media-sm{
+    max-width: 100%;
+  }
 
   &__item{
     width: 132px;
@@ -48,12 +126,40 @@
     opacity: 0.6;
     transition: 0.2s;
 
+    @include media-xl{
+      width: 110px;
+      height: 71px;
+    }
+
+    @include media-lg{
+      width: 98px;
+      height: 63px;
+    }
+
+    @include media-md{
+      width: 126px;
+      height: 81px;
+    }
+
+    @include media-sm{
+      width: 100%;
+      height: 100%;
+      max-height: 60px;
+      min-height: 40px;
+    }
+
     &.active{
       opacity: 1;
     }
 
     &-image{
       width: 100%;
+      height: 100%;
+
+      @include media-sm{
+        object-fit: cover;
+        min-height: 40px;
+      }
     }
 
     &:hover{

@@ -11,6 +11,69 @@
     padding: 20px 0 25px;
   }
 
+  @include media-xl{
+    padding: 14px 0 18px;
+  }
+
+  @include media-sm{
+    padding: 15px 15px 17px;
+  }
+
+  &__mobile{
+    position: fixed;
+    right: -200%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 65px;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    background: white;
+    max-width: 400px;
+    z-index: 5;
+
+    @include media-sm{
+      max-width: 305px;
+    }
+
+    &:before {
+      opacity: 0;
+      visibility: hidden;
+      content: '';
+      position: fixed;
+      width: calc(100% - 400px);
+      height: 100%;
+      left: 0;
+      top: 65px;
+      background: rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      z-index: 4;
+
+      @include media-sm{
+        width: calc(100% - 305px);
+        top: 63px;
+      }
+    }
+
+    &.open{
+      right: 0;
+
+      &:before{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .call__phone{
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+      margin: 0 auto auto;
+    }
+  }
+
   &__container{
     display: flex;
     align-items: flex-end;
@@ -22,6 +85,22 @@
       margin: 0 auto;
     }
 
+    @include media-xl{
+      max-width: 1076px;
+    }
+
+    @include media-lg{
+      max-width: 968px;
+    }
+
+    @include media-md{
+      max-width: 596px;
+    }
+
+    @include media-sm{
+      max-width: unset;
+    }
+
     &-left{
       display: flex;
       align-items: flex-end;
@@ -30,6 +109,15 @@
       @include media-xxl{
         gap: 82px;
       }
+
+      @include media-xl{
+        gap: 63px;
+      }
+
+      @include media-lg{
+        gap: 35px;
+      }
+
 
       .logo{
         max-width: 216px;
@@ -40,11 +128,29 @@
           max-height: 42px;
         }
 
+        @include media-xl{
+          max-width: 123px;
+          max-height: 32px;
+        }
+
+        @include media-sm{
+          max-width: 116px;
+          max-height: 30px;
+        }
+
         &__icon{
           width: 216px;
 
           @include media-xxl{
             width: 158px;
+          }
+
+          @include media-xl{
+            width: 123px;
+          }
+
+          @include media-sm{
+            width: 116px;
           }
         }
       }
@@ -61,6 +167,20 @@
           line-height: 21px;
         }
 
+        @include media-xl{
+          gap: 13px;
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        @include media-lg{
+          gap: 10px;
+        }
+
+        @include media-md{
+          display: none;
+        }
+
         &__icon{
           width: 18px;
           height: 23px;
@@ -68,6 +188,11 @@
           @include media-xxl{
             width: 16px;
             height: 22px;
+          }
+
+          @include media-xl{
+            width: 13px;
+            height: 18px;
           }
         }
       }
@@ -82,6 +207,17 @@
         gap: 40px;
       }
 
+      @include media-xl{
+        gap: 30px;
+      }
+
+      @include media-md{
+        flex-direction: column;
+        gap: 35px;
+        align-items: flex-start;
+        margin: auto auto 0;
+      }
+
       &__item{
         font-size: 15px;
         line-height: 23px;
@@ -90,6 +226,21 @@
         @include media-xxl{
           font-size: 14px;
           line-height: 21px;
+        }
+
+        @include media-xl{
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        @include media-lg{
+          font-size: 10px;
+          line-height: 15px;
+        }
+
+        @include media-md{
+          font-size: 16px;
+          line-height: 24px;
         }
 
         &.active{
@@ -111,13 +262,25 @@
         gap: 39px;
       }
 
+      @include media-xl{
+        gap: 38px;
+      }
+
+      @include media-lg{
+        gap: 33px;
+      }
+
       .call{
         display: flex;
         align-items: center;
         gap: 30px;
 
         @include media-xxl{
-          gap: 25px;
+          gap: 20px;
+        }
+
+        @include media-lg{
+          gap: 15px;
         }
 
         &__phone{
@@ -129,6 +292,11 @@
           @include media-xxl{
             font-size: 16px;
             line-height: 24px;
+          }
+
+          @include media-xl{
+            font-size: 14px;
+            line-height: 21px;
           }
 
           &:hover{
@@ -162,6 +330,11 @@
             line-height: 21px;
           }
 
+          @include media-xl{
+            font-size: 12px;
+            line-height: 18px;
+          }
+
           &:hover{
             color: $lightgreen;
           }
@@ -183,12 +356,30 @@
         max-height: 22px;
         position: relative;
 
+        @include media-xl{
+          max-width: 18px;
+          max-height: 18px;
+        }
+
+        @include media-lg{
+          max-width: 20px;
+          max-height: 20px;
+        }
+
         &:hover .cart__value{
           background: $darkgreen;
         }
 
         &__icon{
           width: 22px;
+
+          @include media-xl{
+            width: 18px;
+          }
+
+          @include media-lg{
+            width: 20px;
+          }
         }
 
         &__value{
@@ -210,6 +401,119 @@
           @include media-xxl{
             font-size: 12px;
             line-height: 18px;
+          }
+
+          @include media-xl{
+            top: -12px;
+            right: -11px;
+          }
+
+          @include media-lg{
+            top: -10px;
+            right: -9px;
+          }
+        }
+      }
+    }
+
+    .header__icons{
+      display: flex;
+      align-items: center;
+      gap: 35.5px;
+
+      @include media-sm{
+        gap: 30.5px;
+      }
+
+      &-item{
+        width: 20px;
+        height: 20px;
+        position: relative;
+
+        &_icon{
+          width: 20px;
+          height: 20px;
+        }
+
+        &_value{
+          font-size: 12px;
+          line-height: 18px;
+          transition: 0.2s;
+          background: #152326;
+          position: absolute;
+          color: white;
+          border-radius: 100%;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: -10px;
+          right: -9px;
+        }
+      }
+
+      #burger{
+        width: 23px;
+        height: 13px;
+        position: relative;
+        transition-duration: 1s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        & span{
+          height: 1px;
+          width: 23px;
+          background-color: $gray;
+          border-radius: 20px;
+          position: absolute;
+          transition-duration: .25s;
+          transition-delay: .25s;
+
+          &:before{
+            left: 0;
+            position: absolute;
+            top: -6px;
+            height: 1px;
+            width: 23px;
+            background-color: $gray;
+            content: "";
+            border-radius: 20px;
+            transition-duration: .25s;
+            transition: transform .25s, top .25s .25s;
+          }
+
+          &:after{
+            left: 0;
+            position: absolute;
+            top: 6px;
+            height: 1px;
+            width: 23px;
+            background-color: $gray;
+            content: "";
+            border-radius: 20px;
+            transition-duration: .25s;
+            transition: transform .25s, top .25s .25s;
+          }
+        }
+
+        &.open span{
+          transition-duration: 0.1s;
+          transition-delay: .25s;
+          background: transparent;
+
+          &:before{
+            transition: top .25s, transform .25s .25s;
+            top: 0;
+            transform: rotateZ(-45deg);
+          }
+
+          &:after{
+            transition: top 0.4s, transform .25s .25s;
+            top: 0;
+            transform: rotateZ(45deg);
           }
         }
       }

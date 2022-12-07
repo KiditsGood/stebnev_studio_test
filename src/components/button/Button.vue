@@ -1,9 +1,13 @@
 <template>
-    <button class="button button--green">добавить в заявку</button>
+    <button class="button button--green">{{ buttTitle }}</button>
 </template>
 
 <script>
     export default {
-        name: "Button"
+        name: "Button",
+
+        props: {
+            buttTitle: String
+        }
     }
 </script>

@@ -11,25 +11,25 @@ $screen-xxl: 1919.98px;
 };
 
 @mixin media-md {
-  @media (min-width: $screen-sm + 0.02) and (max-width: $screen-md) {
+  @media (max-width: $screen-md) {
     @content;
   }
 };
 
 @mixin media-lg {
-  @media (min-width: $screen-md + 0.02) and (max-width: $screen-lg) {
+  @media (max-width: $screen-lg) {
     @content;
   }
 };
 
 @mixin media-xl {
-  @media (min-width: $screen-lg + 0.02) and (max-width: $screen-xl) {
+  @media (max-width: $screen-xl) {
     @content
   }
 };
 
 @mixin media-xxl {
-  @media (min-width: $screen-xl + 0.02) and (max-width: $screen-xxl) {
+  @media (max-width: $screen-xxl) {
     @content
   }
 };

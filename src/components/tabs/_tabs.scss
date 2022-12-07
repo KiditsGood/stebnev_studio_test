@@ -1,0 +1,151 @@
+.tabs{
+  max-width: 1490px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 150px auto 0;
+
+  @include media-xxl{
+    gap: 50px;
+    margin: 140px auto 0;
+    max-width: 1380px;
+  }
+
+  @include media-xl{
+    max-width: 1076px;
+    gap: 40px;
+    margin: 120px auto 0;
+  }
+
+  @include media-lg{
+    max-width: 968px;
+    margin: 100px auto 0;
+  }
+
+  @include media-md{
+    max-width: 596px;
+    margin: 78px auto 0;
+    gap: 31px;
+  }
+
+  &__header{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border-bottom: 1px solid #F3F4F4;
+
+    @include media-xl{
+      gap: 45px;
+    }
+
+    @include media-md{
+      gap: 40px;
+      overflow-x: auto;
+    }
+
+    &-item{
+      font-size: 14px;
+      line-height: 24px;
+      color: $lightgray;
+      padding-bottom: 13px;
+      position: relative;
+      text-transform: uppercase;
+
+      @include media-xl{
+        font-size: 12px;
+        line-height: 24px;
+        padding-bottom: 11px;
+      }
+
+      @include media-md{
+        white-space: nowrap;
+      }
+
+      &:hover{
+        color: $gray;
+      }
+
+      &.active{
+        color: $gray;
+
+        &:after{
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          background: $lightgreen;
+          left: 0;
+          right: 0;
+          height: 3px;
+          animation: tab 0.4s ease-out;
+        }
+      }
+    }
+  }
+
+  &__item{
+    max-width: 873px;
+
+    @include media-xxl{
+      max-width: 780px;
+    }
+
+    & p{
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.15px;
+      color: $lightgray;
+      margin-top: 21px;
+
+      @include media-xxl{
+        font-size: 12px;
+        line-height: 22px;
+        margin-top: 22px;
+      }
+    }
+
+    & ul{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px 0 30px;
+
+      @include media-xxl{
+        gap: 14px;
+      }
+
+      & li{
+        font-size: 14px;
+        line-height: 28px;
+        position: relative;
+        padding-left: 28px;
+
+        @include media-xxl{
+          font-size: 12px;
+          line-height: 24px;
+          padding-left: 18px;
+        }
+
+        &:before{
+          content: '';
+          position: absolute;
+          top: 5px;
+          left: 0;
+          width: 8px;
+          height: 13px;
+          background: url("./assets/img/list_arrow.svg") no-repeat center 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes tab {
+  0%{
+    left: 50%;
+    right: 50%;
+  }
+  to {
+    left: 0;
+    right: 0;
+  }
+}

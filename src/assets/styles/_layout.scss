@@ -1,6 +1,38 @@
 .wrapper{
-  padding-top: 105px;
+  padding-top: 104px;
+
+  @include media-xxl{
+    padding-top: 88px;
+  }
+
+  @include media-xl{
+    padding-top: 65px;
+  }
+
+  @include media-sm{
+    padding-top: 63px;
+  }
 }
 .container{
-  padding: 135px 0 200px;
+  padding: 144px 0 200px;
+
+  @include media-xxl{
+    padding: 148px 0 180px;
+  }
+
+  @include media-xl{
+    padding: 135px 0 160px;
+  }
+
+  @include media-lg{
+    padding: 112px 0 140px;
+  }
+
+  @include media-md{
+    padding: 50px 0 111px;
+  }
+
+  @include media-sm{
+    padding: 40px 15px 110px;
+  }
 }
